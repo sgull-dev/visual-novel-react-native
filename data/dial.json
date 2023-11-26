@@ -1,0 +1,60 @@
+{
+  "9999":
+  {
+    "dialogue": "",
+    "image": "",
+    "choice_1": [],
+    "choice_2": []
+  },
+  "1":
+  {
+    "dialogue": "The lab's heavy door opened. A waft of air drove in. I entered the lab. I came here on orders to be a assistant for Dr. Boof. /nLet's see here, hmm, what's that? [there was goop of weird looking slime on the floor]",
+    "image": "lab_entrance",
+    "choice_1": [2, "Touch the goo."],
+    "choice_2": [3, "Enter the lab through the door."]
+  },
+  "2":
+  {
+    "dialogue": "Eww, it's all gooey. [You quickly shake the goo off of your hand]",
+    "image": "lab_entrance",
+    "choice_1": [3, "Enter the lab."]
+  },
+  "3":
+  {
+    "dialogue": "-Oh good you're here. We have been waiting for some more assistance. I'm Dr Boof and this is miss Sharla. Now we are in a bit of a pinch here, could you go get your lab coat from the storage unit on the hallway. It's just over there.",
+    "image": "boof_alive",
+    "choice_1": [4, "Enter the hallway."]
+  },
+  "4":
+  {
+    "dialogue": "You enter the hallway. Dimly lit halogen bulbs flash a little in the distance. Someone is scurrying about with a big stack of papers. They look busy. There is a soda machine and to the left of it is the storage unit.",
+    "image": "lab_entrance",
+    "choice_1": [6, "Mmmm, soda."],
+    "choice_2": [5, "I should go get my coat."]
+  },
+  "5":
+  {
+    "dialogue": "It's a storage unit. A little stuffy. Lot's  of stuff on the shelfs.",
+    "image": "storage",
+    "choice_1": [7, "Look for the coat."],
+    "choice_2": [9, "I wonder what's all this stuff?"]
+  },
+  "6":
+  {
+    "dialogue": "Oh man, let's grab a soda. *clink* *Tunk* Mmm Dr Oopsie... [Suddenly you hear a scream back from the lab]",
+    "image": "lab_entrance",
+    "choice_1": [8, "???"]
+  },
+  "7":
+  {
+    "dialogue": "Oh, here are the coats, let's see, size L should be fine. There we go, let's head back to the lab. I'm sure Dr. Boof has some job for me to do.",
+    "image": "lab_entrance",
+    "choice_1": [10, "Head back."]
+  },
+  "8":
+  {
+    "dialogue": "The door slams open. A large humanoid monster slams through the door, barely fitting through the frame. Before you can move, the monster grabs you by the waist and snaps you in half.",
+    "image": "monster_1",
+    "ending": [100, "(XoX)"]
+  }
+}
