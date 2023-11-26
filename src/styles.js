@@ -14,12 +14,18 @@ export const myStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: primaryBackgroundColor,
+  },
+  content: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
   scroll: {
     flex: 1,
     marginTop: 20,
+  },
+  buttonHolder: {
+    marginVertical: 15,
   },
   title: {
     fontSize: 60,

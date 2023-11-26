@@ -3,7 +3,7 @@
 
 import { StatusBar } from 'expo-status-bar';
 import React, {useState, useEffect} from 'react';
-import { Text, View, ScrollView, TouchableOpacity, StyleSheet, BackHandler } from 'react-native';
+import { Text, View, ScrollView, TouchableOpacity, StyleSheet, BackHandler, SafeAreaView } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { myStyles } from './src/styles';
 
@@ -19,7 +19,7 @@ const MainMenu = ({ onStartChapter, onStartEndings }) => {
   };
 
   return (
-    <View style={myStyles.container}>
+    <View style={myStyles.content}>
       <Text style={myStyles.title}>HORG2</Text>
 
       <TouchableOpacity
@@ -76,7 +76,7 @@ const ChapterComponent = ({ onEnding, dialogueIndex }) => {
   }, []); //empty dependency array ensures that this effect runs once
 
   return (
-    <View style={myStyles.container}>
+    <View style={myStyles.content}>
       <ScrollView style={myStyles.scroll}>
         {jsonData && (
           <View style={myStyles.dialogueBox}>
@@ -85,36 +85,40 @@ const ChapterComponent = ({ onEnding, dialogueIndex }) => {
         )}
 
       </ScrollView>
-      {jsonData && (
-        jsonData[currentDialogue.toString()].hasOwnProperty("choice_1") ? (
-          <TouchableOpacity
-            style={myStyles.button}
-            onPress={() => handleChoicePress(jsonData[currentDialogue.toString()]["choice_1"][0])}
-          >
-            <Text style={myStyles.buttonText}>{jsonData[currentDialogue.toString()]["choice_1"][1]}</Text>
-          </TouchableOpacity>
-        ) : null
-      )}
-      {jsonData && (
-        jsonData[currentDialogue.toString()].hasOwnProperty("choice_2") ? (
-          <TouchableOpacity
-            style={myStyles.button}
-            onPress={() => handleChoicePress(jsonData[currentDialogue.toString()]["choice_2"][0])}
-          >
-            <Text style={myStyles.buttonText}>{jsonData[currentDialogue.toString()]["choice_2"][1]}</Text>
-          </TouchableOpacity>
-        ) : null
-      )}
-      {jsonData && (
-        jsonData[currentDialogue.toString()].hasOwnProperty("ending") ? (
-          <TouchableOpacity
-            style={myStyles.button}
-            onPress={() => handleEndingPress(jsonData[currentDialogue.toString()]["ending"][0])}
-          >
-            <Text style={myStyles.buttonText}>{jsonData[currentDialogue.toString()]["ending"][1]}</Text>
-          </TouchableOpacity>
-        ) : null
-      )}
+
+      <View style={myStyles.buttonHolder}>
+        {jsonData && (
+          jsonData[currentDialogue.toString()].hasOwnProperty("choice_1") ? (
+            <TouchableOpacity
+              style={myStyles.button}
+              onPress={() => handleChoicePress(jsonData[currentDialogue.toString()]["choice_1"][0])}
+            >
+              <Text style={myStyles.buttonText}>{jsonData[currentDialogue.toString()]["choice_1"][1]}</Text>
+            </TouchableOpacity>
+          ) : null
+        )}
+        {jsonData && (
+          jsonData[currentDialogue.toString()].hasOwnProperty("choice_2") ? (
+            <TouchableOpacity
+              style={myStyles.button}
+              onPress={() => handleChoicePress(jsonData[currentDialogue.toString()]["choice_2"][0])}
+            >
+              <Text style={myStyles.buttonText}>{jsonData[currentDialogue.toString()]["choice_2"][1]}</Text>
+            </TouchableOpacity>
+          ) : null
+        )}
+        {jsonData && (
+          jsonData[currentDialogue.toString()].hasOwnProperty("ending") ? (
+            <TouchableOpacity
+              style={myStyles.button}
+              onPress={() => handleEndingPress(jsonData[currentDialogue.toString()]["ending"][0])}
+            >
+              <Text style={myStyles.buttonText}>{jsonData[currentDialogue.toString()]["ending"][1]}</Text>
+            </TouchableOpacity>
+          ) : null
+        )}
+      </View>
+
     </View>
   );
 };
@@ -143,7 +147,7 @@ const EndingsComponent = ({ onReturn, eData }) => {
   }, []); //empty dependency array ensures that this effect runs once
 
   return (
-    <View style={myStyles.container}>
+    <View style={myStyles.content}>
       <ScrollView style={myStyles.scroll}>
         {jsonData &&
           Object.keys(endingsData).map((key) => (
@@ -259,11 +263,18 @@ export default function App() {
   };
 
   //Handle rendering correct page
-  return isDialogue ? (
-    <ChapterComponent onEnding={achieveEnding} dialogueIndex={1} />
-  ) : isEndings ? (
-    <EndingsComponent onReturn={startMenu} eData={endingsData}/>
-  ) : (
-    <MainMenu onStartChapter={startChapter} onStartEndings={startEndings} />
+  return (
+    <SafeAreaView style={myStyles.container}>
+    {
+      isDialogue ? (
+        <ChapterComponent onEnding={achieveEnding} dialogueIndex={1} />
+      ) : isEndings ? (
+        <EndingsComponent onReturn={startMenu} eData={endingsData}/>
+      ) : (
+        <MainMenu onStartChapter={startChapter} onStartEndings={startEndings} />
+      )
+    }
+    <StatusBar style='#524133' />
+    </SafeAreaView>
   )
 };
