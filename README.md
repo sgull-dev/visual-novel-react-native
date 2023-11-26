@@ -1,5 +1,5 @@
 # visual-novel-react-native
-![Screenshot1](img/sc_1b.jpg) ![Screenshot2](img/sc_2b.jpg)
+![Screenshot1](img/sc_4.jpg)
 ## Features
 -> Interactive Visual Novel App
 
