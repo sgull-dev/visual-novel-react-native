@@ -56,5 +56,37 @@
     "dialogue": "The door slams open. A large humanoid monster slams through the door, barely fitting through the frame. Before you can move, the monster grabs you by the waist and snaps you in half.",
     "image": "monster_1",
     "ending": [100, "(XoX)"]
+  },
+  "9":
+  {
+    "dialogue": "Hmm, let's see what's on the shelves... Books, tools, hmm, this looks like a weird liquid. [There are a dozen or so bottles filled with increasingly darkened colors] Damn, some kangaroo jerky. *nom nom* [Suddenly you see a weird blob of flesh] Oh god, what is THAT!? Jesus, it looks like it's alive... [Suddenly you feel the urge to place your hand on the blob]",
+    "image": "blob_on_shelf",
+    "choice_1": [12, "I should drink one of those bottles. It must be a energy drink!"],
+    "choice_2": [13, "Touch the blob. (Do it!)"]
+  },
+  "10": {
+    "dialogue": "The day passes, you get shown the basics around the lab. Finally you are shown to your room. Nice, cozy place. Single bed, small table. Night light.",
+    "image": "",
+    "choice_1": [11, "Next Day"]
+  },
+  "11": {
+    "dialogue": "Dr Boof: -Perfect now that we have gotten you all oriented to the lab, let's start with an experiment. Grab these vials here, we'll begin mixing some stuff. Now let me get my notes...",
+    "image": "boof_alive",
+    "ending": [102, "Start Chapter 2 (Coming Soon)"]
+  },
+  "12": {
+    "dialogue": "This one's yellow, must be BlueCow. [You take a heavy svig from the vial, filled with yellowy goodness] Urgh-w-what?? [You feel your heart pulsing, something is amiss] Aaargh [Your muscles engorge, the power of the drink is too strong, it most certainly wasn't bluecow, the relaxation drink] Gurg Gurg [Already having lost his mind, the poor assisntant-to-be ripped the door off of it's hinges and started lunging at his previous coworkers]",
+    "image": "monster_1",
+    "ending": [101, "(XoX)"]
+  },
+  "13": {
+    "dialogue": "You slap your hand on the blob. The slight squish feels ecquisite. You are not quite sure what it is. [Suddenly you begin hearing a voice in your head] B-bring me aaa BODY... I must GROW... [Well, he is making a really good point there, you think] a..ct FAST...",
+    "image": "blob_on_shelf",
+    "choice_1": [14, "I guess I must bring a body..."]
+  },
+  "14": {
+    "dialogue": "[You pull your hand from the blob. You feel refreshed, energized. You have a purpose.] Ahh, I guess I have to do that then. Here it's my coat, let's get back to Dr.Boof. Yes, doctor...",
+    "image": "storage",
+    "choice_1": [10, "Head back to the lab."]
   }
 }

@@ -184,15 +184,6 @@ export default function App() {
     "100": false,
     "101": false,
     "102": false,
-    "103": false,
-    "104": false,
-    "105": false,
-    "106": false,
-    "107": false,
-    "108": false,
-    "109": false,
-    "110": false,
-    "111": false,
     //add more endings as needed
   };
   const [endingsData, setEndingsData] = useState(initialEndings);
