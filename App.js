@@ -127,8 +127,8 @@ const ChapterComponent = ({ onEnding, dialogueIndex }) => {
 //Endings Component. Handles the page for showing all the acquired endings.
 //If a ending hasn't been gotten yet, instead it renders a locked-icon
 const EndingsComponent = ({ onReturn, eData }) => {
-  console.log("Entering EndingsComponent");
-  console.log("EndingsData:", eData);
+  //console.log("Entering EndingsComponent");
+  //console.log("EndingsData:", eData);
   const endingsData = eData
 
   const [jsonData, setJsonData] = useState(null);
@@ -202,7 +202,7 @@ export default function App() {
       }
     };
 
-    //loadEndingsData(); //<-UNCOMMENT THIS TO GET LOADING TO WORK!! OFF FOR DEBUG
+    loadEndingsData(); //<-UNCOMMENT THIS TO GET LOADING TO WORK!! OFF FOR DEBUG
   }, []);
 
   //Save Endings Data when it changes
@@ -244,7 +244,7 @@ export default function App() {
       // Modify the desired value
       newData[key] = true;
       // Set the updated object back into the state
-      console.log(`Setting key '${key}' to be true in the EndingsData`);
+      //console.log(`Setting key '${key}' to be true in the EndingsData`);
       setEndingsData(newData);
 
     } else {
