@@ -29,6 +29,6 @@
 -> `ending[0]` on the other hand points to which ending to give the player. Achieved endings are saved in a AsyncStorage. The data/endings.json file keeps the strings to show in the Endings Page per ending.
 ## Install
 1. Clone repo
-2. run `yarn add expo`
+2. run `npm install`
 3. run `npx expo start`
 4. Connect to Expo Go on phone by reading the QR-code
