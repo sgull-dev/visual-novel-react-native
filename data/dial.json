@@ -22,7 +22,7 @@
   "3":
   {
     "dialogue": "-Oh good you're here. We have been waiting for some more assistance. I'm Dr Boof and this is miss Sharla. Now we are in a bit of a pinch here, could you go get your lab coat from the storage unit on the hallway. It's just over there.",
-    "image": "boof_alive",
+    "image": "lab_entrance",
     "choice_1": [4, "Enter the hallway."]
   },
   "4":
@@ -66,12 +66,11 @@
   },
   "10": {
     "dialogue": "The day passes, you get shown the basics around the lab. Finally you are shown to your room. Nice, cozy place. Single bed, small table. Night light.",
-    "image": "",
     "choice_1": [11, "Next Day"]
   },
   "11": {
     "dialogue": "Dr Boof: -Perfect now that we have gotten you all oriented to the lab, let's start with an experiment. Grab these vials here, we'll begin mixing some stuff. Now let me get my notes...",
-    "image": "boof_alive",
+    "image": "lab_entrance",
     "ending": [102, "Start Chapter 2 (Coming Soon)"]
   },
   "12": {

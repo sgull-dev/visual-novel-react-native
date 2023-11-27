@@ -70,5 +70,10 @@ export const myStyles = StyleSheet.create({
     fontSize: 20,
     color: primaryTextColor,
     textAlign: 'center',
+  },
+  image: {
+    alignSelf: 'center',
+    width: 350,
+    height: 250,
   }
 });

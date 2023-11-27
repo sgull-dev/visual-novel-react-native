@@ -3,7 +3,7 @@
 
 import { StatusBar } from 'expo-status-bar';
 import React, {useState, useEffect} from 'react';
-import { Text, View, ScrollView, TouchableOpacity, StyleSheet, BackHandler, SafeAreaView } from 'react-native';
+import { Text, View, Image, ScrollView, TouchableOpacity, StyleSheet, BackHandler, SafeAreaView } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { myStyles } from './src/styles';
 
@@ -53,6 +53,13 @@ const ChapterComponent = ({ onEnding, dialogueIndex }) => {
   const [jsonData, setJsonData] = useState(null);
   const [currentDialogue, setCurrentDialogue] = useState(dialogueIndex);
 
+  const imageMap = {
+    "blob_on_shelf": require('./img/blob_on_shelf.jpg'),
+    "monster_1": require('./img/monster_1.jpg'),
+    "lab_entrance": require('./img/lab_entrance.jpg'),
+    "storage": require('./img/storage.jpg')
+  };
+
   const handleEndingPress = (endingIndex) => {
     onEnding({key:endingIndex.toString()});
   };
@@ -78,8 +85,17 @@ const ChapterComponent = ({ onEnding, dialogueIndex }) => {
   return (
     <View style={myStyles.content}>
       <ScrollView style={myStyles.scroll}>
+        
         {jsonData && (
           <View style={myStyles.dialogueBox}>
+            {jsonData && (
+              jsonData[currentDialogue.toString()].hasOwnProperty("image") ? (
+                <Image
+                  source={imageMap[jsonData[currentDialogue.toString()]["image"]]}
+                  style={myStyles.image}
+                />
+              ) : null
+            )}
             <Text style={myStyles.dialogueText}>{jsonData[currentDialogue.toString()]["dialogue"]}</Text>
           </View>
         )}
