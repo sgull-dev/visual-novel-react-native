@@ -75,5 +75,6 @@ export const myStyles = StyleSheet.create({
     alignSelf: 'center',
     width: 350,
     height: 250,
+    marginVertical: 20,
   }
 });

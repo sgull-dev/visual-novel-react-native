@@ -57,7 +57,7 @@ const ChapterComponent = ({ onEnding, dialogueIndex }) => {
     "blob_on_shelf": require('./img/blob_on_shelf.jpg'),
     "monster_1": require('./img/monster_1.jpg'),
     "lab_entrance": require('./img/lab_entrance.jpg'),
-    "storage": require('./img/storage.jpg')
+    "storage": require('./img/lab_entrance.jpg')
   };
 
   const handleEndingPress = (endingIndex) => {
