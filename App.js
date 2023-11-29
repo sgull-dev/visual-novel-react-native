@@ -7,6 +7,13 @@ import { Text, View, Image, ScrollView, TouchableOpacity, StyleSheet, BackHandle
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { myStyles } from './src/styles';
 
+const imageMap = {
+  "blob_on_shelf": require('./img/blob_on_shelf.jpg'),
+  "monster_1": require('./img/monster_1.jpg'),
+  "lab_entrance": require('./img/lab_entrance.jpg'),
+  "storage": require('./img/lab_entrance.jpg')
+};
+
 //Main Menu Component with menu buttons. Handle the quit-button behaviour.
 //Send click data back to main App from other buttons.
 const MainMenu = ({ onStartChapter, onStartEndings }) => {
@@ -53,12 +60,7 @@ const ChapterComponent = ({ onEnding, dialogueIndex }) => {
   const [jsonData, setJsonData] = useState(null);
   const [currentDialogue, setCurrentDialogue] = useState(dialogueIndex);
 
-  const imageMap = {
-    "blob_on_shelf": require('./img/blob_on_shelf.jpg'),
-    "monster_1": require('./img/monster_1.jpg'),
-    "lab_entrance": require('./img/lab_entrance.jpg'),
-    "storage": require('./img/lab_entrance.jpg')
-  };
+  
 
   const handleEndingPress = (endingIndex) => {
     onEnding({key:endingIndex.toString()});
