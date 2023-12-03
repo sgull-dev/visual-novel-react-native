@@ -197,6 +197,7 @@ const EndingsComponent = ({ onReturn, eData }) => {
 export default function App() {
   const [isDialogue, setIsDialogue] = useState(false);
   const [isEndings, setIsEndings] = useState(false);
+  
   //structure for keeping track of acquired Endings
   const initialEndings = {
     "100": false,
@@ -205,6 +206,7 @@ export default function App() {
     //add more endings as needed
   };
   const [endingsData, setEndingsData] = useState(initialEndings);
+
   //AsyncStorage saving for endingsData
   //Attempt to load saved data on startup
   useEffect(() => {
